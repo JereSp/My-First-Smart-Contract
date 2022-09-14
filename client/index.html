@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="/libs/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <title>DApp Tasks</title>
+    </head>
+    <body>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-body rounded-0 mb-4 bg-dark">
+                        <h1>Dapp</h1>
+                        <h6 class="text-muted">Decentralized task app</h6>
+                        <span>Wallet</span>
+                        <span id="account"></span>
+                    </div>
+
+                    <form
+                        class="card card-body bg-dark rounded-0"
+                        id="taskForm"
+                    >
+                        <h4>Save a task</h4>
+                        <input
+                            type="text"
+                            placeholder="Write a task"
+                            class="form-control bg-dark text-white rounded-0 border-0 my-4"
+                            name="title"
+                        />
+                        <textarea
+                            class="form-control bg-dark text-white rounded-0 border-0 my-4"
+                            rows="4"
+                            placeholder="I have to do..."
+                            name="description"
+                        ></textarea>
+                        <button class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+
+                <div class="col-md-8">
+                    <div id="taskList"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- scripts -->
+        <script src="./libs/@truffle/contract/browser-dist/truffle-contract.min.js"></script>
+        <script src="app.js"></script>
+        <script src="ui.js"></script>
+    </body>
+</html>
